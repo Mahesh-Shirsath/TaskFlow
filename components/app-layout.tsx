@@ -92,6 +92,7 @@ export function AppLayout({ children }: AppLayoutProps) {
           </div>
         )}
 
+
         {/* Desktop sidebar */}
         <div className="hidden w-64 flex-shrink-0 border-r sm:block">
           <nav className="flex h-full flex-col gap-1 p-4">

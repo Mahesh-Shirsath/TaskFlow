@@ -10,6 +10,7 @@ import { Badge } from "@/components/ui/badge"
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select"
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
 import { AppLayout } from "@/components/app-layout"
+import { EditIssueDialog } from "@/components/edit-issue-dialog"
 import { ChevronLeft, MessageSquare, Paperclip, Clock, AlertCircle } from "lucide-react"
 
 // Mock issue data
@@ -95,7 +96,7 @@ export default function IssuePage() {
               <Badge variant="outline">{mockIssue.type}</Badge>
               <h1 className="text-2xl font-bold">{mockIssue.summary}</h1>
             </div>
-            <Button variant="outline">Edit</Button>
+            <EditIssueDialog issue={mockIssue} />
           </div>
           <div className="mt-2 text-sm text-muted-foreground">
             Issue #{mockIssue.id} • Created by {mockIssue.reporter.name} on{" "}

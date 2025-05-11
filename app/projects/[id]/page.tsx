@@ -2,12 +2,12 @@
 
 import { useState } from "react"
 import { useParams } from "next/navigation"
-import { Button } from "@/components/ui/button"
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
 import { AppLayout } from "@/components/app-layout"
 import { KanbanBoard } from "@/components/kanban-board"
 import { IssuesList } from "@/components/issues-list"
 import { ProjectHeader } from "@/components/project-header"
+import { CreateIssueDialog } from "@/components/create-issue-dialog"
 
 // Mock data for the project
 const mockProject = {
@@ -49,7 +49,7 @@ export default function ProjectPage() {
               <TabsTrigger value="timeline">Timeline</TabsTrigger>
               <TabsTrigger value="reports">Reports</TabsTrigger>
             </TabsList>
-            <Button>Create Issue</Button>
+            <CreateIssueDialog projectId={projectId} />
           </div>
 
           <TabsContent value="board" className="mt-6">
